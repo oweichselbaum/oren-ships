@@ -8,22 +8,14 @@ Steps for installation and running
 
 * rake products:script - runs script to populate DV
 
-* GET /api/v1/products
-..* Returns all products
+* GET /api/v1/products - Returns all products
 
-* POST /api/v1/products
-** Create
-** Required Params - name, type, length, height, weight, width
+* POST /api/v1/products - Create: Required Params - name, type, length, height, weight, width
 
-* PUT /api/v1/products/:id
-** Update
-** Params - name, type, length, height, weight, width
+* PUT /api/v1/products/:id - Update: Params - name, type, length, height, weight, width
 
-* GET /api/v1/products/:id
-** Returns individual product
+* GET /api/v1/products/:id - Returns individual product
 
 * Delete /api/v1/products/:id
-** Delete
 
-* GET /api/v1/products/measurements/:length/:width/:height/:weight
-** This returns a list of appropriatly sized bags
+* GET /api/v1/products/measurements/:length/:width/:height/:weight - This returns a list of appropriatly sized bags
