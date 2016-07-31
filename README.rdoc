@@ -15,8 +15,8 @@ Steps for installation and running
   * Body = raw: {"product": {"name": "Test Bag", "type": "golf", "length":"42", "width":"23", "height":"74", "weight":"32"}}
 
 * PUT /api/v1/products/:id - Update: Params - name, type, length, height, weight, width
- * Example: Headers: Content-Type = application/json
- * Body = raw: {"product": {"name": "Test Bag Edit", "type": "golf", "length":"42", "width":"23", "height":"74", "weight":"32"}}
+  * Example: Headers: Content-Type = application/json
+  * Body = raw: {"product": {"name": "Test Bag Edit", "type": "golf", "length":"42", "width":"23", "height":"74", "weight":"32"}}
 
 * GET /api/v1/products/:id - Returns individual product
 
