@@ -36,6 +36,7 @@ $(document).ready(function () {
 
   function closeModal() {
     modal.hide();
+    $('#calculator-form').validate().resetForm();
   }
 
   $('span.close').click(function () {

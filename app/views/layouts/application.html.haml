@@ -6,9 +6,12 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
+    %link{:href => "/assets/favicon.ico", :rel => "icon"}
+
     %title
-      - unless yield(:title).to_s.empty?
-        = yield (:title)
+      - if controller.controller_name == "welcome"
+        Calculator
+      - else
         Products CMS
 
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true

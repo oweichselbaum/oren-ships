@@ -9,23 +9,23 @@
           .col-md-6
             .form-control-group
               %label.control-label{:for =>"length"} Length
-              %span.mandatory *
+              %span.required *
               %input#length-field.form-control.form-margin{:autofocus => "", :name => "length", :type => "number", placeholder: "Length"}
           .col-md-6
             .form-group
               %label.control-label{:for =>"width"} Width
-              %span.mandatory *
+              %span.required *
               %input#width-field.form-control.form-margin{:name => "width", :type => "number", placeholder: "Width"}
         .row
           .col-md-6
             .form-group
               %label.control-label{:for =>"height"} Height
-              %span.mandatory *
+              %span.required *
               %input#height-field.form-control.form-margin{:name => "height", :type => "number", placeholder: "Height"}
           .col-md-6
             .form-group
               %label.control-label{:for =>"weight"} Weight
-              %span.mandatory *
+              %span.required *
               %input#weight-field.form-control.form-margin{:name => "weight", :type => "number", placeholder: "Weight"}
         .row
           .col-md-12.text-center
