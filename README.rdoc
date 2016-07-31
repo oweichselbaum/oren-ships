@@ -1,28 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps for installation and running
 
-Things you may want to cover:
+* bundle install - install dependencies
 
-* Ruby version
+* rake db:create - create mongoDB
 
-* System dependencies
+* rake products:script - runs script to populate DV
 
-* Configuration
+* GET /api/v1/products
+** Returns all products
 
-* Database creation
+* POST /api/v1/products
+** Create
+** Required Params - name, type, length, height, weight, width
 
-* Database initialization
+* PUT /api/v1/products/:id
+** Update
+** Params - name, type, length, height, weight, width
 
-* How to run the test suite
+* GET /api/v1/products/:id
+** Returns individual product
 
-* Services (job queues, cache servers, search engines, etc.)
+* Delete /api/v1/products/:id
+** Delete
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* GET /api/v1/products/measurements/:length/:width/:height/:weight
+** This returns a list of appropriatly sized bags

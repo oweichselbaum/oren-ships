@@ -12,8 +12,11 @@
         .panel-body
           .list-group
             .list-group-item
-              %strong Type:
+              %strong ID:
               = @product.id
+            .list-group-item
+              %strong Slug:
+              = @product.slug
             .list-group-item
               %strong Type:
               = @product.type

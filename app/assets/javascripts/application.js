@@ -48,11 +48,9 @@ $(document).ready(function () {
         length: {
           required: true
         },
-
         width: {
           required: true
         },
-
         height: {
           required: true
         },
