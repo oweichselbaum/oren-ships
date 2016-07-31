@@ -20,8 +20,8 @@ Steps for installation and running
   * Example: Headers: Content-Type = application/json
   * Body = raw: {"product": {"name": "Test Bag Edit", "type": "golf", "length":"42", "width":"23", "height":"74", "weight":"32"}}
 
-* GET /api/v1/products/:id - Returns individual product
+* GET /api/v1/products/:id - Returns individual product, id or slug
 
-* Delete /api/v1/products/:id
+* Delete /api/v1/products/:id - Deletes a product, id or slug
 
 * GET /api/v1/products/measurements/:length/:width/:height/:weight - This returns a list of appropriatly sized bags
