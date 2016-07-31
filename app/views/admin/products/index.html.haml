@@ -18,4 +18,4 @@
           %td= p.height
           %td= p.weight
           %td= link_to 'Edit', edit_admin_product_path(p), class: 'btn btn-primary btn-block btn-sm'
-          %td= link_to 'Delete', admin_product_path(p), class: 'btn btn-danger btn-block', method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to 'Delete', admin_product_path(p), class: 'btn btn-danger btn-block', method: :delete, data: { confirm: 'Are you sure you want to delete this product?' }
