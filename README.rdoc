@@ -25,3 +25,5 @@ Steps for installation and running
 * Delete /api/v1/products/:id - Deletes a product, id or slug
 
 * GET /api/v1/products/measurements/:length/:width/:height/:weight - This returns a list of appropriatly sized bags
+
+* Click Admin in the nav to get to the CMS, click the logo or Home to get to the calculator
