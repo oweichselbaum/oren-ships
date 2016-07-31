@@ -8,6 +8,8 @@ Steps for installation and running
 
 * rake products:script - runs script to populate DV
 
+* rail s - start the server
+
 * GET /api/v1/products - Returns all products
 
 * POST /api/v1/products - Create: Required Params - name, type, length, height, weight, width
