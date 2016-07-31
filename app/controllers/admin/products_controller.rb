@@ -2,7 +2,7 @@ class Admin::ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   protect_from_forgery except: :all
 
-  expose(:product) { Product.find(id) }
+  expose(:product)
   expose(:products) { Product.all }
   expose(:id) { params[:id] }
   expose(:name) { params[:name] }
@@ -103,7 +103,7 @@ class Admin::ProductsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.permit(:name, :type, :length, :width, :height, :weight)
+    params.require(:product).permit(:name, :type, :length, :width, :height, :weight)
   end
 
 end
