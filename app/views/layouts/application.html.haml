@@ -1,0 +1,33 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    %title
+      - unless yield(:title).to_s.empty?
+        = yield (:title)
+        Products CMS
+
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+  %body{:class => "site #{body_classes}"}
+    #wrapper
+      = render 'layouts/global_nav'
+      #page-wrapper
+        .container-fluid
+          - if notice || alert
+            #flash
+              -if notice
+                .alert.alert-info
+                  = notice
+              - if alert
+                .alert.alert-warning
+                  = alert
+
+          = yield
+      #push
+    = render 'layouts/footer'

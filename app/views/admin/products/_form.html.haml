@@ -1,0 +1,32 @@
+= form_for ['admin', @product] do |f|
+  .container
+    .row
+      .col-md-12
+        - if @product.errors.any?
+          #error_explanation
+            %h2= "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+            %ul
+              - @product.errors.full_messages.each do |msg|
+                %li= msg
+        .form-group
+          %label Name
+          = f.text_field :name, class: 'input-xxlarge', placeholder: 'Enter name here', class: 'form-control', style: "width: 100%;"
+        .form-group
+          %label Type
+          = f.text_field :type, class: 'input-xxlarge', placeholder: 'Enter type here', class: 'form-control', style: "width: 100%;"
+        .form-group
+          %label Length
+          = f.number_field :length, class: 'input-xxlarge', placeholder: 'Enter length here', class: 'form-control', style: "width: 100%;"
+        .form-group
+          %label Width
+          = f.number_field :width, class: 'input-xxlarge', placeholder: 'Enter width here', class: 'form-control', style: "width: 100%;"
+        .form-group
+          %label Height
+          = f.number_field :height, class: 'input-xxlarge', placeholder: 'Enter height here', class: 'form-control', style: "width: 100%;"
+        .form-group
+          %label Weight
+          = f.number_field :weight, class: 'input-xxlarge', placeholder: 'Enter weight here', class: 'form-control', style: "width: 100%;"
+
+        .actions
+          = f.submit 'Save Product', :class => "btn btn-lg btn-block btn-primary"
+          = link_to 'Back to Products', admin_products_path, :class => "btn btn-lg btn-block btn-secondary"

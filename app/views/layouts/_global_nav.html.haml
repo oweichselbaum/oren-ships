@@ -1,0 +1,50 @@
+#unscrolled-menu-wrapper.row.hidden-xs.hidden-sm.hidden-md{:style => "display: block;"}
+  .col-md-12
+    .row
+      .col-md-12
+        .container
+          %ul.nav.navbar-nav.pull-right
+            %li
+              %a.right-nav{:href => "http://support.shipsticks.com/customer/en/portal/articles/1970301-becoming-a-partner", :target => "_blank"} Become a partner
+            %li
+              %p.right-nav.separator |
+            %li
+              %a.right-nav{:href => "#"} Register
+            %li
+              %p.right-nav.separator |
+            %li
+              %a.right-nav{:href => "#"} Login
+
+%nav#navbar-menu.navbar.navbar-fixed-top.navbar-black
+  .container
+    .navbar-header.page-scroll
+      %button{:type=>'button', :class=>'navbar-toggle', 'data-toggle'=>'collapse', 'data-target'=>'#bs-example-navbar-collapse'}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "/"}
+        %img.nav-logo{:src => "/assets/text-logo-dark.png"}/
+    #bs-example-navbar-collapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => root_url, class: controller.controller_name == "welcome" ? "active":""} HOME
+        %li
+          %a{:href => admin_products_path, class: controller.controller_name == "products" ? "active":""} ADMIN
+        %li
+          %a{:href => "#"} ABOUT US
+        %li
+          %a{:href => "#"} HOW IT WORKS
+        %li
+          %a{:href => "#"} SUPPORT
+        %li
+          %a{:href => "#"} REGISTER
+        %li
+          %a{:href => "#"} LOGIN
+        %li
+          %a.ship-now{:href => "#"} SHIP NOW
+.header-bg
+  .container.slogan-wrapper
+    %h2.banner Simplify the way you travel
+    .col-md-4.text-center.col-centered{:style=>"margin-top:20px;"}
+      %a#launch-btn.btn.btn-secondary.calculate-btn.btn-block Launch Calculator

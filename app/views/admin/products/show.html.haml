@@ -1,0 +1,36 @@
+.row
+  .col-lg-12
+    %h1.page-header #{@product.name}
+
+.container
+  .row
+    .col-md-12
+      .panel.panel-default{:style => "margin-top: 20px;"}
+        -#.panel-heading
+        -#  %h3.panel-title
+        -#    %i.fa.fa-clock-o.fa-fw
+        .panel-body
+          .list-group
+            .list-group-item
+              %strong Type:
+              = @product.id
+            .list-group-item
+              %strong Type:
+              = @product.type
+            .list-group-item
+              %strong Length:
+              = @product.length
+            .list-group-item
+              %strong Width:
+              = @product.width
+            .list-group-item
+              %strong Height:
+              = @product.height
+            .list-group-item
+              %strong weight:
+              = @product.weight
+          .text-left
+            = link_to  edit_admin_product_path(@product), class: 'btn btn-primary pull-right' do
+              Edit #{@product.name}
+            = link_to  admin_products_path, class: 'btn btn-secondary' do
+              Back to Products

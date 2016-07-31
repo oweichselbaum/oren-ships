@@ -1,0 +1,44 @@
+= render 'calculator_modal'
+
+.container
+  .row
+    .col-md-12.text-center
+      %h2 OUR PROCESS IS SIMPLE
+      %p
+        At Ship Sticks, we make getting your golf clubs to and from your destination easier than it’s ever been – allowing you to enjoy a hassle-free travel experience to anywhere in the world.
+      %hr.space/
+    .col-md-11.col-md-offset-1.text-center.step-descrip
+      .col-sm-2.col-md-2.text-center
+        %img.step{:src => "/assets/step_1.png"}
+        %span.step-desc
+          1. Fill out &amp; submit
+          %br.hidden-sm
+          online form
+      .col-sm-1.col-md-1.text-center
+        %img.margin-push{:src => "/assets/step_separator.png"}
+      .col-sm-2.col-md-2.text-center
+        %img.step{:src => "/assets/step_2.png"}
+        %span.step-desc
+          1. Print &amp; attach
+          %br.hidden-sm
+          shipping label
+      .col-sm-1.col-md-1.text-center
+        %img.margin-push{:src => "/assets/step_separator.png"}
+      .col-sm-2.col-md-2.text-center
+        %img.step{:src => "/assets/step_3.png"}
+        %span.step-desc
+          3. Drop off bags or
+          %br.hidden-sm
+          allow for pickup
+      .col-sm-1.col-md-1.text-center
+        %img.margin-push{:src => "/assets/step_separator.png"}
+      .col-sm-2.col-md-2.text-center
+        %img.step{:src => "/assets/step_4.png"}
+        %span.step-desc
+          4. Enjoy on time golf
+          %br.hidden-sm
+          club arrival
+
+.container.results{:style => "margin-top: 20px;"}
+  .row
+    #answer-names.col-md-12.text-center

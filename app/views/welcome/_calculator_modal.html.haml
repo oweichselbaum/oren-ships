@@ -1,0 +1,38 @@
+#myModal.modal
+  .modal-content
+    .modal-header
+      %span.close ×
+      %h2 Product Calculator
+    .modal-body
+      %form#calculator-form
+        .row
+          .col-md-6
+            .form-control-group
+              %label.control-label{:for =>"length"} Length
+              %span.mandatory *
+              %input#length-field.form-control.form-margin{:autofocus => "", :name => "length", :type => "number", placeholder: "Length"}
+          .col-md-6
+            .form-group
+              %label.control-label{:for =>"width"} Width
+              %span.mandatory *
+              %input#width-field.form-control.form-margin{:name => "width", :type => "number", placeholder: "Width"}
+        .row
+          .col-md-6
+            .form-group
+              %label.control-label{:for =>"height"} Height
+              %span.mandatory *
+              %input#height-field.form-control.form-margin{:name => "height", :type => "number", placeholder: "Height"}
+          .col-md-6
+            .form-group
+              %label.control-label{:for =>"weight"} Weight
+              %span.mandatory *
+              %input#weight-field.form-control.form-margin{:name => "weight", :type => "number", placeholder: "Weight"}
+        .row
+          .col-md-12.text-center
+            %p#error
+            %button#calculate.btn.btn-secondary.btn-block
+              Calculate
+    .modal-footer
+      .row
+        .col-md-12.text-center
+          #response
