@@ -11,8 +11,8 @@ Steps for installation and running
 * GET /api/v1/products - Returns all products
 
 * POST /api/v1/products - Create: Required Params - name, type, length, height, weight, width
- * Example: Headers: Content-Type = application/json
- * Body = raw: {"product": {"name": "Test Bag", "type": "golf", "length":"42", "width":"23", "height":"74", "weight":"32"}}
+  * Example: Headers: Content-Type = application/json
+  * Body = raw: {"product": {"name": "Test Bag", "type": "golf", "length":"42", "width":"23", "height":"74", "weight":"32"}}
 
 * PUT /api/v1/products/:id - Update: Params - name, type, length, height, weight, width
  * Example: Headers: Content-Type = application/json
