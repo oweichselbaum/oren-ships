@@ -9,7 +9,7 @@ Steps for installation and running
 * rake products:script - runs script to populate DV
 
 * GET /api/v1/products
-* * Returns all products
+ * Returns all products
 
 * POST /api/v1/products
 ** Create
