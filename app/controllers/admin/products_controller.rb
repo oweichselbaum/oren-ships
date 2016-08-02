@@ -86,12 +86,7 @@ class Admin::ProductsController < ApplicationController
 
   def calculate_measurements_match
     measurement_match = Product.dimensions(length, width, height, weight)
-    matches = []
-    measurement_match.each do |m|
-      matches << m.name.to_s
-    end
-    message = matches
-    render json: message.any? ? message : "There are no matches for these measurments"
+    render json: measurement_match ? {message: measurement_match.name} : "There are no matches for these measurments"
 
   end
 

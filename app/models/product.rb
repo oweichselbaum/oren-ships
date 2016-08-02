@@ -22,6 +22,6 @@ class Product
   scope :product_weight, ->(w) { where(:weight.gte => w).order_by(weight: :asc) }
 
   def self.dimensions length, width, height, weight
-    self.product_length(length).product_width(width).product_height(height).product_weight(weight).all
+    self.product_length(length).product_width(width).product_height(height).product_weight(weight).first
   end
 end

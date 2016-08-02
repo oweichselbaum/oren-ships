@@ -84,7 +84,7 @@ $(document).ready(function () {
             $("#response").empty();
             $('label.valid, #calculate').hide();
             $("input").prop('disabled', true);
-            $("#response").append("<h4>Your Options:</h4>");
+            $("#response").append("<h4>Your Result:</h4>");
             $.each(response, function (index, name) {
               $("#response").append("<p class=\"col-md-12\">" + name + "</p>");
             });
